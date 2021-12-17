@@ -53,3 +53,32 @@ int main() {
 
   return 0;
 }
+
+/* class Solution {
+public:
+    int romanToInt(string s) {
+  //char* char_arr;
+
+  //char roman[8] = {'I', 'V', 'X', 'L', 'C', 'D', 'M'};
+  
+  string roman = {"IVXLCDM"};
+  int value[8] = {1, 5, 10, 50, 100, 500, 1000};
+  int sum = 0;
+  cout << roman[0] << endl;
+  cout << roman[1] << endl;
+
+  for (int i = 0; i < roman.length(); i++){
+      for (int j = 0; j < s.length(); j++){
+          if (roman[i] == s[j]){
+              //int index = s.find(roman[i]);
+             
+              sum += value[i];
+             
+          }
+      }
+  }
+
+  return sum;
+}
+
+}; */
