@@ -19,6 +19,7 @@ vector<int> twoSum(vector<int>& nums, int target) {
           map[nums[i]] = i;
       }
   }
+  return res;
 }
 
 int main() {
