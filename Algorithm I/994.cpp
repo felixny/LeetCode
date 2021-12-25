@@ -38,9 +38,15 @@ class Solution {
         }
       }
 
-      if (!changed) break;
+      // if no rotten orange found it means all
+      // oranges rottened now
+      if (!changed) {
+        break;
+      }
       changed = false;
+      
       no++;
+      //cout << no << endl;
     }
 
     for (int i = 0; i < grid.size(); i++) {
@@ -67,7 +73,7 @@ class Solution {
 int main() {
   vector<vector<int>> g = {{2, 1, 1}, {1, 1, 0}, {0, 1, 1}};
   vector<vector<int>> g1 = {{2, 1, 0, 2, 1}, {1, 0, 1, 2, 1}, {1, 0, 0, 2, 1}};
-  cout << Solution().orangesRotting(g) << endl;
-  cout << Solution().orangesRotting(g1) << endl;
+  cout << "ans is : " << Solution().orangesRotting(g) << endl;
+  //cout << Solution().orangesRotting(g1) << endl;
   return 0;
 }
