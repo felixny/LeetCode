@@ -23,8 +23,11 @@ class Solution {
 
       while (current != nullptr){
         temp = current->next;
+        // points to the previous
         current->next = prev;
+        // points to where the current is
         prev = current;
+        // move the head to temp
         current = temp;
       }
 
