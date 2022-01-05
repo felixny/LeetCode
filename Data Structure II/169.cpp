@@ -10,11 +10,34 @@ using namespace std;
 class Solution {
  public:
   int majorityElement(vector<int>& nums) {
+    sort(nums.begin(), nums.end());
 
-      sort(nums.begin(),nums.end());
+    return nums[nums.size() / 2];
+  }
+};
 
-      return nums[nums.size()/2];
+class Solution {
+ public:
+  int majorityElement(vector<int>& nums) {
+    map<int, int> count;
 
+    // iterate through vectors
+    for (int e : nums) {
+        // if it equals to the end
+      if (count.find(e) == count.end()) {
+        count[e] = 1;
+      } else {
+        count[e] += 1;
+      }
+    }
+
+    for (auto iter = count.begin(); iter != count.end(); iter++){
+        if (iter->second > nums.size()/2){
+            return iter->first;
+        }
+    }
+
+    return -1;
   }
 };
 
