@@ -15,36 +15,37 @@ struct ListNode {
   ListNode(int x, ListNode* next) : val(x), next(next) {}
 };
 
-ListNode* removeNthFromEnd(ListNode* head, int n) {
-    
+class Solution {
+ public:
+  ListNode* removeNthFromEnd(ListNode* head, int n) {
     ListNode* fast = head;
     ListNode* slow = head;
 
     // move fast n steps
-    for (int i = 0; i < n;i++){
-        if(fast->next == nullptr){
-            // if number of nodes equal to number of n
-            if (i = n - 1){
-                head = head->next;
-            }
-            return head;
-        }   
-        fast = fast->next;
+    for (int i = 0; i < n; i++) {
+      if (fast->next == nullptr) {
+        // if number of nodes equal to number of n
+        if (i == n - 1) {
+          head = head->next;
+        }
+        return head;
+      }
+      fast = fast->next;
     }
 
     // move both at one time
-    while (fast != nullptr && fast->next != nullptr){
-        slow = slow->next;
-        fast = fast->next;
+    while (fast != nullptr && fast->next != nullptr) {
+      slow = slow->next;
+      fast = fast->next;
     }
 
-    // re-link 
-    if (slow->next != nullptr){
-        slow->next = slow->next->next;
+    // re-link
+    if (slow->next != nullptr) {
+      slow->next = slow->next->next;
     }
 
     return head;
-
-}
+  }
+};
 
 int main() { return 0; }
