@@ -49,7 +49,7 @@ class Solution {
         if (nums[i] + nums[j] + nums[k] == 0) {
           ans.push_back({nums[i], nums[j], nums[k]});
           ++j;
-          if (j && nums[j] == nums[j - 1]) ++j;
+          while (j < k && nums[j] == nums[j - 1]) ++j;
         } else if (nums[i] + nums[j] + nums[k] < 0) {
           ++j;
         } else {
