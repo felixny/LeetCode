@@ -1,13 +1,6 @@
 // 78. Subsets
 
-#include <algorithm>
-#include <iostream>
-#include <map>
-#include <set>
-#include <string>
-#include <vector>
-
-using namespace std;
+xc
 
 class Solution {
   void subsets_rec(vector<int>& nums, int index, vector<vector<int>>& result) {
