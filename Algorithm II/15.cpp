@@ -39,3 +39,35 @@ class Solution {
     return result;
   }
 };
+
+// accepeted O(n)
+class Solution {
+ public:
+  vector<vector<int>> threeSum(vector<int>& nums) {
+    sort(nums.begin(), nums.end());
+    const int n = nums.size();
+    vector<vector<int>> ans;
+
+    for (int i = 0; i < n; i++) {
+      // if next number is the same skips it
+      if (i && nums[i] == nums[i - 1]) continue;
+      // two pointers set up
+      int j = i + 1;
+      int k = n - 1;
+
+      while (j < k) {
+        if (nums[i] + nums[j] + nums[k] == 0) {
+          ans.push_back({nums[i], nums[j], nums[k]});
+          ++j;
+          while (j < k && nums[j] == nums[j - 1]) ++j;
+        } else if (nums[i] + nums[j] + nums[k] < 0) {
+          ++j;
+        } else {
+          --k;
+        }
+      }
+    }
+
+    return ans;
+  }
+};
