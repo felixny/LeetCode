@@ -13,22 +13,22 @@ class Solution {
   void rotate(vector<vector<int>>& matrix) {
     int n = matrix.size();
     int temp;
-    int minRow, maxRow;
+    int start, end;
 
     for (int i = 0; i < n / 2; i++) {
-      minRow = i;
-      maxRow = n - i - 1;
-      for (int j = i, k = 0; j < maxRow; j++, k++) {
+      start = i;
+      end = n - 1 - i;
+      for (int i = start; i < end; i++) {
         // store top left to temp
-        temp = matrix[minRow][minRow + k];
-        // move bottom left to top left
-        matrix[minRow][minRow + k] = matrix[maxRow - k][minRow];
-        // move bottom right to bottom left
-        matrix[maxRow - k][minRow] = matrix[maxRow][maxRow - k];
-        // move top right to bottom right
-        matrix[maxRow][maxRow - k] = matrix[minRow + k][maxRow];
-        // move temp to top right
-        matrix[minRow + k][maxRow] = temp;
+       int temp = matrix[start][i];
+       // left in top
+       matrix[start][i] = matrix[n-1-i][start];
+       // bottom in left
+       matrix[n-1-i][start] = matrix[end][n-1-i];
+       // right in bottom
+       matrix[end][n-1-i] = matrix[i][end];
+       // top in right
+       matrix[i][end] = temp;
       }
     }
   }
