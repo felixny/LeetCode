@@ -29,4 +29,23 @@ class Solution {
   }
 };
 
-int main() { return 0; }
+
+
+int main() { 
+  
+  vector<vector<int>> graph{{1, 2}, {3}, {3}, {}};
+  Solution s;
+  graph = s.allPathsSourceTarget(graph);
+  
+  
+  //cout << graph.size() << endl;
+  
+ for (int v : graph[0])
+ cout << v << endl;
+
+ for (int v : graph[1])
+ cout << v << endl;
+
+
+
+  return 0; }
