@@ -3,7 +3,10 @@ import java.util.List;
 
 public class Solution438 {
     public List<Integer> findAnagrams(String s, String p) {
+        
         List<Integer> res = new ArrayList<>();
+
+        if (s == null || s.length() == 0 || s.length() < p.length()) return res;
 
         int[] phash = new int[26];
         int[] shash = new int[26];
