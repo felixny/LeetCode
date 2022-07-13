@@ -19,7 +19,7 @@ public class ListNode {
 
 public class lc876 {
 
-
+    // list node 
     public ListNode middleNode(ListNode head) {
         ListNode slow = head;
         ListNode fast = head;
