@@ -9,6 +9,7 @@ public class Solution43 {
         Solution43 main = new Solution43();
         String result = main.multiply(num1,num2);
         System.out.println(result);
+        // testing out
       }
     
 
