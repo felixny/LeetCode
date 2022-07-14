@@ -24,4 +24,8 @@ public class lc75 {
         nums[i] = nums[j];
         nums[j]= temp;
     }
+
+    public static void main(String[] args) {
+        
+    }
 }
