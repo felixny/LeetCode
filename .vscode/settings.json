@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
+        "Data Structure II",
         "Algorithm II",
-        "Data Structure II"
+        "Blind75"
     ],
 }
