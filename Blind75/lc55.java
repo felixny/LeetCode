@@ -1,4 +1,4 @@
-public class lc55 {
+public class lc55{
     public boolean canJump(int[] nums) {
         int canJump = 0;
         int n = nums.length;
