@@ -11,7 +11,8 @@ public class lc207 {
 
         for (int[] pre : prerequisites) {
             adj[pre[0]].add(pre[1]);
-
+            System.out.println(pre[0]);
+            System.out.println(pre[1]);
             System.out.println(Arrays.toString(pre));
         }
 
