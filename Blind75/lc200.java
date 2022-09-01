@@ -26,7 +26,7 @@ class lc200 {
         
         grid[i][j] = '2';
         dfs(grid,i+1,j);
-m         dfs(grid,i-1,j);
+        dfs(grid,i-1,j);
         dfs(grid,i,j+1);
         dfs(grid,i,j-1);
         
