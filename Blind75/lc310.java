@@ -62,6 +62,7 @@ public class lc310 {
                 for(int i : adj.get(v)){
                     System.out.println("i : " + i);
                     degree[i]--;
+                    System.out.println(Arrays.toString(degree));
                     if (degree[i] == 1){
                         //System.out.println(degree[i]);
                         q.add(i);
