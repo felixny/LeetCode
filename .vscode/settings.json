@@ -6,6 +6,7 @@
     ],
     "files.associations": {
         "unordered_set": "cpp",
-        "set": "cpp"
+        "set": "cpp",
+        "iostream": "cpp"
     },
 }
