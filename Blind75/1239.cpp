@@ -22,6 +22,7 @@ public:
         }
         
         for (int i = itr; i < arr.size(); i++){
+            cout << "str: " << str+arr[i] << endl;
             checkLen(str+arr[i],arr,i+1);
         }
     }
@@ -29,6 +30,7 @@ public:
     bool isUnique(string word){
         unordered_set<char> set;
         for (auto s : word){
+            cout << "s: " << s << endl;
             if (set.find(s) != set.end()) return false;
             set.insert(s);
         }
@@ -40,7 +42,13 @@ int main(int argc, char const *argv[])
 {
     vector<string> str = {"un","iq","ue"};
     Solution lc1239;
-    cout << lc1239.maxLength(str) << endl;
+   cout << lc1239.maxLength(str) << endl;
+
+    cout << ""+ str[1] << endl;
+    unordered_set<char> string;
+    for (auto s : str){
+        cout << s << endl;
+    }
 
     return 0;
 }
