@@ -8,6 +8,7 @@
         "unordered_set": "cpp",
         "set": "cpp",
         "iostream": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "cmath": "cpp"
     },
 }
